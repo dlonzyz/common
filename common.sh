@@ -1938,7 +1938,7 @@ git clone https://user:${REPO_TOKEN}@github.com/${GIT_REPOSITORY}.git UPLOAD
 mkdir -p "UPLOAD/build/${FOLDER_NAME}/relevance"
 mv ${start_path} UPLOAD/build/${FOLDER_NAME}/relevance/settings.ini
 export YML_PATH="UPLOAD/.github/workflows/compile.yml"
-cp -Rf ${GITHUB_WORKSPACE}/.github/workflows/compile.yml ${YML_PATH}
+cp -Rf ${GITHUB_WORKSPACE}/.github/workflows/compile1.yml ${YML_PATH}
 export TARGET1="$(grep 'target: \[' "${YML_PATH}" |sed 's/^[ ]*//g' |grep -v '^#' |sed 's/\[/\\&/' |sed 's/\]/\\&/')"
 export TARGET2="target: \\[${FOLDER_NAME}\\]"
 export PATHS1="$(grep -Eo "\- '.*'" "${YML_PATH}" |sed 's/^[ ]*//g' |grep -v "^#" |awk 'NR==1')"
