@@ -379,10 +379,7 @@ LIENOL)
     fi
   elif [[ "${REPO_BRANCH}" == "21.02" ]]; then
     find . -type d -name "luci-app-unblockneteasemusic" |xargs -i rm -rf {}
-    if [[ -d "${HOME_PATH}/build/common/Share/cmake" ]]; then
-      rm -rf ${HOME_PATH}/tools/cmake
-      cp -Rf ${HOME_PATH}/build/common/Share/cmake ${HOME_PATH}/tools/cmake
-    fi
+
   elif [[ "${REPO_BRANCH}" == "22.03" ]]; then
     if [[ -d "${HOME_PATH}/build/common/Share/glib2" ]]; then
       rm -rf ${HOME_PATH}/feeds/packages/libs/glib2
